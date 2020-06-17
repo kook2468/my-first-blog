@@ -145,3 +145,4 @@ def chart_data(request):  # 접속 경로 'json-example/data/'에 대응하는 �
     # [list(map(lambda))](https://wikidocs.net/64)
 
     return JsonResponse(chart)
+
