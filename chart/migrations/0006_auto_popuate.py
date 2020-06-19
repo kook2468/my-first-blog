@@ -1,4 +1,4 @@
-# chart/migrations/0004_auto_popuate.py
+# chart/migrations/0006_auto_popuate.py
 """
 DB 현행화 작업이 실행될 때, csv 파일 자료를 DB에 자동적으로 적재한다.
 """

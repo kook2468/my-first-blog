@@ -8,16 +8,6 @@ import datetime
 from django.db import migrations
 from django.conf import settings
 
-# csv 파일의 해당 열 번호를 상수로 정의
-from chart.models import Covid
-
-TICKET_CLASS = 0  # 승차권 등급
-SURVIVED = 1      # 생존 여부
-NAME = 2          # 이름
-SEX = 3           # 성별
-AGE = 4           # 나이
-EMBARKED = 10     # 탑승지
-
 def add_covid(apps, schema_editor):
     Covid = apps.get_model('chart', 'Covid')  # (app_label, model_name)
     csv_file = os.path.join(settings.BASE_DIR, 'covid19.csv')
