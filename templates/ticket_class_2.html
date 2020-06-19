@@ -14,23 +14,51 @@
         Highcharts.chart('container', {
             chart: {
                 type: 'column',
+                borderColor: '#ddd',
+                borderWidth: 3
             },
             title: {
-                text: 'Titanic Survivors by Ticket Class'
+                text: '좌석 등급에 따른 타이타닉 생존/비 생존 인원 및 생존율'
             },
             xAxis: {
                 categories: {{ categories|safe }}  /* safe 필터 */
             },
+            yAxis: [{ //Primary yAxis
+                title: {
+                    text: '생존율'
+                },
+                labels: {
+                    format: '{value} %'
+                }
+            }, {  //Secondary yAxis
+                title: {
+                    text: '인원'
+                },
+                labels: {
+                    format: '{value} 명'
+                },
+                opposite: true
+            }],
             series: [{
                 name: 'Survived',
+                type: 'column',
                 data: {{ survived_series }},
-                color: 'green'
+                color: 'green',
+                yAxis: 1
             }, {
                 name: 'Not survived',
+                type: 'column',
                 data: {{ not_survived_series }},
-                color: 'red'
+                color: 'red',
+                yAxis: 1
+            }, {
+                name: 'Survival Rate',
+                type: 'spline',
+                data: {{ survival_rate }},
+                color: 'blue'
             }]
         });
+
     </script>
 </body>
 </html>

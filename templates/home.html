@@ -7,9 +7,13 @@
 </head>
 <body>
   <ul>
+    <li><a href="{% url 'covid_19' %}">covid_19 확진자+회복자+사망자 시각화 차트</a></li>
+    <li><a href="{% url 'covid_confirmed' %}">covid_19 확진자 시각화 차트</a></li>
+    <li><a href="{% url 'covid_recovered' %}">covid_19 회복자 시각화 차트</a></li>
+    <li><a href="{% url 'covid_deaths' %}">covid_19 사망자 시각화 차트</a></li>
     <li><a href="{% url 'world_population' %}">World Population</a></li>
     <li><a href="{% url 'ticket_class_view_1' %}">Ticket Class #1</a></li>
-    <li><a href="{% url 'ticket_class_view_2' %}">Ticket Class #2</a></li>
+    <li><a href="{% url 'ticket_class_view_2' %}">Ticket Class #2 - 생존율 추가</a></li>
     <li><a href="{% url 'ticket_class_view_3' %}">Ticket Class #3</a></li>
     <li><a href="{% url 'json_example' %}">JSON Example</a></li>
   </ul>

@@ -5,6 +5,14 @@ from chart import views                                     # !!!
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('covid_19/',
+         views.covid_19, name='covid_19'),
+    path('covid_confirmed/',
+         views.covid_confirmed, name="covid_confirmed"),
+    path('covid_recovered/',
+         views.covid_recovered, name="covid_recovered"),
+    path('covid_deaths/',
+         views.covid_deaths, name="covid_deaths"),
     path('ticket-class/1/',
          views.ticket_class_view_1, name='ticket_class_view_1'),
     path('ticket-class/2/',

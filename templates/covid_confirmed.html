@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="http://code.highcharts.com/modules/data.js"></script>
+
+    <title>covid_확진자</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">Return to homepage</a>
+    <div id="container"></div>
+    <script>
+        Highcharts.chart('container', {{ chart|safe }});
+    </script>
+
+</body>
+</html>

@@ -12,10 +12,10 @@
   <script>
     Highcharts.chart('container', {
         chart: {
-            type: 'bar' //column
+            type: 'column' //bar
         },
         title: {
-            text: '타이타닉 Survivors by Ticket Class'
+            text: 'Titanic Survivors by Ticket Class'
         },
         xAxis: {
             categories: [
@@ -40,6 +40,13 @@
               {% endfor %}
             ],
             color: 'red'
+        }, {
+            name: 'Survival Rate',
+            data: [
+              {% for entry in dataset %}
+                {{ entry.survival_rate }}{% if not forloop.last %}, {% endif %}
+              {% endfor %}
+            ]
         }]
     });
   </script>

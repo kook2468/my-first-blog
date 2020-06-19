@@ -29,3 +29,57 @@ class Passenger(models.Model):  # 승객 모델
 
     def __str__(self):
         return self.name
+
+
+class Covid(models.Model):
+    # 칼럼 정의
+    date = models.DateField()
+    france = models.FloatField(null=True)
+    germany = models.FloatField(null=True)
+    korea = models.FloatField(null=True)
+    us = models.FloatField(null=True)
+    uk = models.FloatField(null=True)
+
+    def __float__(self):
+        return self.korea
+
+
+class Covid_confirmed(models.Model):
+    # 칼럼 정의
+    date = models.DateField()
+    france = models.FloatField(null=True)
+    germany = models.FloatField(null=True)
+    korea = models.FloatField(null=True)
+    us = models.FloatField(null=True)
+    uk = models.FloatField(null=True)
+
+    def __float__(self):
+        return self.korea
+
+
+class Covid_recovered(models.Model):
+    # 칼럼 정의
+    date = models.DateField()
+    france = models.FloatField(null=True)
+    germany = models.FloatField(null=True)
+    korea = models.FloatField(null=True)
+    us = models.FloatField(null=True)
+    uk = models.FloatField(null=True)
+
+    def __float__(self):
+        return self.korea
+
+
+class Covid_deaths(models.Model):
+    # 칼럼 정의
+    date = models.DateField()
+    france = models.FloatField(null=True)
+    germany = models.FloatField(null=True)
+    korea = models.FloatField(null=True)
+    us = models.FloatField(null=True)
+    uk = models.FloatField(null=True)
+
+    def __float__(self):
+        return self.korea
+
+
