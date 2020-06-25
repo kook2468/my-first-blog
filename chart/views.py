@@ -13,6 +13,10 @@ def home(request):
     return render(request, 'home.html')
 
 
+def covid_jupyterlab(request):
+    return render(request, 'covid_jupyterlab.html')
+
+
 def covid_19(request):
     # 데이터 가져오기
     df = pd.read_csv('https://raw.githubusercontent.com/datasets/covid-19/master/data/countries-aggregated.csv',
@@ -437,7 +441,7 @@ def covid_deaths(request):
             'borderColor': '#ddd',
             'borderWidth': 3
         },
-        'title': {'text': 'Covid-19 회복자 발생율'},
+        'title': {'text': 'Covid-19 사망자 발생율'},
         'subtitle': {
             'text': 'Source: https://raw.githubusercontent.com/datasets/covid-19/master/data/countries-aggregated.csv'},
         'legend': {

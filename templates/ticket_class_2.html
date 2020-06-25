@@ -4,9 +4,39 @@
 <head>
     <meta charset="utf-8">
     <title>Django Highcharts Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="http://code.highcharts.com/modules/data.js"></script>
 </head>
 <body>
-    <a href="{% url 'home' %}">Return to homepage</a>
+<div class="container">
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="/">Home</a>
+        </div>
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">타이타닉 생존율 차트<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/covid_jupyterlab/">Jupyter Lab에서 작성한 Covid-19 차트</a></li>
+                        <li><a href="/covid_19/">Covid-19 확진자,회복자,사망자 발생률</a></li>
+                        <li><a href="/covid_confirmed/">Covid-19 확진자 발생률</a></li>
+                        <li><a href="/covid_recovered/">Covid-19 회복자 발생률</a></li>
+                        <li><a href="/covid_deaths/">Covid-19 사망자 발생률</a></li>
+                        <li><a href="/ticket-class/2/">타이타닉 생존율 차트</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div id="container"></div>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
 
@@ -60,5 +90,14 @@
         });
 
     </script>
+
+    <center>
+        <p><b>차트설명</b></p>
+        <p>좌석 등급에 따른 생존 및 비 생존 인원 수와 생존율을 이중 축(dual axes)으로 설정하였다.</p>
+        <p>꺾은선과 막대차트를 이용하여 작성하였다.</p>
+    </center>
+
+     <nav class="navbar navbar-inverse" style="color:white"><center>한양여자대학교 218210011 최다경</center></nav>
+</div>
 </body>
 </html>

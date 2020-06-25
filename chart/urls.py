@@ -5,6 +5,8 @@ from chart import views                                     # !!!
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('covid_jupyterlab/',
+         views.covid_jupyterlab, name="covid_jupyterlab"),
     path('covid_19/',
          views.covid_19, name='covid_19'),
     path('covid_confirmed/',

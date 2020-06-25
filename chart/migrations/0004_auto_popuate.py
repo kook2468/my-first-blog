@@ -31,3 +31,6 @@ class Migration(migrations.Migration):
     operations = [                              # 작업
         migrations.RunPython(add_covid),   # add_passengers 함수를 호출
     ]
+
+
+

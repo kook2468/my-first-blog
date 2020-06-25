@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Jupyter Lab에서 작성한 COVID-19차트</title>
+</head>
+<body>
+
+<div class="container">
+  <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="/">Home</a>
+        </div>
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Jupyter Lab에서 작성한 Covid-19 차트<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/covid_jupyterlab/">Jupyter Lab에서 작성한 Covid-19 차트</a></li>
+                        <li><a href="/covid_19/">Covid-19 확진자,회복자,사망자 발생률</a></li>
+                        <li><a href="/covid_confirmed/">Covid-19 확진자 발생률</a></li>
+                        <li><a href="/covid_recovered/">Covid-19 회복자 발생률</a></li>
+                        <li><a href="/covid_deaths/">Covid-19 사망자 발생률</a></li>
+                        <li><a href="/ticket-class/2/">타이타닉 생존율 차트</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  <h2>Jupyter Lab에서 작성한 COVID-19차트</h2>
+  <p>인구대비 개념을 적용했을때와 안했을때를 분류하여 차트를 작성하였다.</p>
+  <p>인구대비 확진자+회복자+사망자를 합친개념과 확진자수만의 개념을 적용했을때를 분류하여 작성하였다.</p>
+
+  <div class="row">
+    <div class="col-md-5">
+      <div class="thumbnail">
+          <img src="https://ifh.cc/g/8CpR8s.png" alt="인구대비x" style="width:100%">
+          <div class="caption">
+              <p><b>인구대비 개념을 적용하지 않은 경우</b></p>
+            <p>US의 코로나 확진자, 회복자, 사망자를 합친 건수가 압도적으로 크다.</p>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="thumbnail">
+          <img src="https://ifh.cc/g/YwuL4b.png" alt="인구대비(sum)" style="width:100%">
+          <div class="caption">
+              <p><b>인구 대비 개념을 적용한 경우(확진자+회복자+사망자)</b></p>
+              <p>US가 가장 심각하고, UK, France, Germany가 US의 절반정도 이다.</p>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="thumbnail">
+          <img src="https://ifh.cc/g/hfP7L2.png" alt="인구대비(확진자)" style="width:100%">
+          <div class="caption">
+            <p><b>인구 대비 개념을 적용한 경우(확진자)</b></p>
+            <p>US, UK, France, Germany, Korea 순으로 크다.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+    <nav class="navbar navbar-inverse" style="color:white"><center>한양여자대학교 218210012 최다경</center></nav>
+</div>
+
+
+
+</body>
+</html>
